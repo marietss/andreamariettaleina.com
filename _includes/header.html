@@ -5,7 +5,13 @@
       <ul class="site-nav-list">
         {%- for page_path in site.header_pages -%}
           {%- if page_path == "cv.md" -%}
-            <li class="site-nav-item"><a class="site-nav-link" href="{{ '/assets/CV.pdf' | relative_url }}" download>CV</a></li>
+            {%- assign cv_href = '/assets/CV.pdf' | relative_url -%}
+            <li class="site-nav-item">
+              <a class="site-nav-link" href="{{ cv_href }}" download
+                 onclick="(function(h){try{var a=document.createElement('a');a.href=h;a.download='CV.pdf';document.body.appendChild(a);a.click();document.body.removeChild(a);}catch(e){};return false;})('{{ cv_href }}')">
+                CV
+              </a>
+            </li>
           {%- else -%}
             {%- assign p = site.pages | where: "path", page_path | first -%}
             {%- if p -%}
