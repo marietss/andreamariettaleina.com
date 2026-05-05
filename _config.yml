@@ -1,0 +1,15 @@
+title: "Andrea Marietta Leina"
+description: "Experimental economist"
+email: "andrea.mariettaleina@unibo.it"
+github_username: "marietss"
+
+theme: minima
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-feed
+
+header_pages:
+  - publications.md
+  - projects.md
+  - teaching.md
