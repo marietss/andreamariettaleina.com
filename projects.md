@@ -1,19 +1,14 @@
 ---
 layout: page
-title: Projects
+title: Work in progress
 permalink: /projects.html
 ---
-
 
 <style>
 details {
   margin-bottom: 1.5rem;
 }
 </style>
-
-# Projects
-
-### Works in progress
 
 <details>
 <summary>Reputation mechanisms in helping games: an experimental investigation of indirect reciprocity.</summary>

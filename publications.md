@@ -3,9 +3,6 @@ layout: page
 title: Publications
 permalink: /publications.html
 ---
-
-# Publications
-
 Fallucchi, F., Marietta Leina, A., and Quercia, S. (2026) "Validating a survey measure of conditional cooperation." 
 *Journal of Economic Psychology*, 114. [DOI:10.1016/j.joep.2026.102901](https://doi.org/10.1016/j.joep.2026.102901).
 
