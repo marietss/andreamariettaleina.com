@@ -1,4 +1,3 @@
-title: "Andrea Marietta Leina"
 description: "Experimental economist"
 email: "andrea.mariettaleina@unibo.it"
 github_username: "marietss"
@@ -13,3 +12,8 @@ header_pages:
   - publications.md
   - projects.md
   - teaching.md
+  - cv.md
+
+defaults:
+  - scope:
+      path: "assets/"
