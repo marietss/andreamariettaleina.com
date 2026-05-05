@@ -4,8 +4,6 @@ title: Teaching
 permalink: /teaching.html
 ---
 
-# Teaching
-
 Associate Fellowship of the Higher Education Accademy [(HEA)](https://www.advance-he.ac.uk/fellowship/associate-fellowship)
 
 

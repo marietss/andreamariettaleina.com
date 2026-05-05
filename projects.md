@@ -11,8 +11,6 @@ details {
 }
 </style>
 
-# Projects
-
 ### Works in progress
 
 <details>
