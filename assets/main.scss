@@ -18,6 +18,20 @@ a:hover {
   color: #1B4D8F;
 }
 
+/* Prevent CLS from margin collapse */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+}
+
+p {
+  margin-top: 0;
+}
+
 /* Light/dark theme overrides */
 html.dark-theme {
   color-scheme: dark;
@@ -71,12 +85,18 @@ html.dark-theme .theme-toggle {
 .theme-toggle {
   margin-left: 0.75rem;
   padding: 0.25rem 0.5rem;
-  border: 8px solid #ccc;
+  border: 2px solid #ccc;
   border-radius: 999px;
   background: #fff;
   color: #111;
   font: inherit;
   cursor: pointer;
+  width: 32px;
+  height: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
 }
 
 .theme-toggle:hover {
@@ -86,6 +106,7 @@ html.dark-theme .theme-toggle {
 /* Footer alignment */
 .site-footer {
   padding: 10px 0;
+  contain: layout style;
 }
 
 .footer-heading {
@@ -140,6 +161,36 @@ html.dark-theme .theme-toggle {
   margin-bottom: 0;
   width: 100%;
   text-align: right !important;
+}
+
+/* Social media list - stable dimensions */
+.social-media-list {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 12px;
+  justify-content: center;
+}
+
+.social-media-list li {
+  display: flex;
+  align-items: center;
+  height: 24px;
+}
+
+.social-media-list a {
+  display: flex;
+  align-items: center;
+  height: 24px;
+}
+
+.svg-icon {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  fill: currentColor;
+  flex-shrink: 0;
 }
 
 @media (max-width: 640px) {

@@ -15,6 +15,7 @@ layout: page
   max-width: 220px;
   width: 100%;
   height: auto;
+  aspect-ratio: 3 / 4;
   border-radius: 6px;
   float: right;
   margin-left: 18px;
@@ -24,15 +25,16 @@ layout: page
   .page-title, h1 { text-align: center; color: #1B4D8F; }
   html.dark-theme .page-title, html.dark-theme h1 { color: #f2f2f2; }
   picture { display: flex; justify-content: center; }
-  .profile-photo { float: none; margin-left: auto; margin-right: auto; margin-bottom: 16px; max-width: 180px; display: block; }
+  .profile-photo { float: none; margin-left: auto; margin-right: auto; margin-bottom: 16px; max-width: 180px; display: block; aspect-ratio: 3 / 4; }
 }
 </style>
 
 <picture>
+  <source type="image/webp" srcset="{{ '/assets/images/me-small.webp' | relative_url }} 360w, {{ '/assets/images/me-medium.webp' | relative_url }} 600w, {{ '/assets/images/me.jpg' | relative_url }} 1200w" sizes="(max-width: 640px) 180px, 220px" />
   <img class="profile-photo" src="{{ '/assets/images/me.jpg' | relative_url }}"
-	   srcset="{{ '/assets/images/me.jpg' | relative_url }} 220w"
+	   srcset="{{ '/assets/images/me-small.jpg' | relative_url }} 360w, {{ '/assets/images/me-medium.jpg' | relative_url }} 600w, {{ '/assets/images/me.jpg' | relative_url }} 1200w"
 	   sizes="(max-width: 640px) 180px, 220px"
-	   alt="Andrea Marietta Leina" loading="lazy" />
+	   alt="Andrea Marietta Leina" fetchpriority="high" />
 </picture>
 
 - Postdoctoral researcher at the University of Bologna, studying the role of firms' beliefs in  low-carbon transition as part of the [BELIEFS project](https://site.unibo.it/beliefs/).
