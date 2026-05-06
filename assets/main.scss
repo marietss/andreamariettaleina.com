@@ -1,0 +1,157 @@
+---
+---
+
+@import "minima";
+
+/* Normal mode with jacket navy blue */
+a {
+  color: #1B4D8F;
+  font-weight: 500;
+}
+
+a:visited,
+a:link {
+  color: #1B4D8F;
+}
+
+a:hover {
+  color: #1B4D8F;
+}
+
+/* Light/dark theme overrides */
+html.dark-theme {
+  color-scheme: dark;
+}
+
+html.dark-theme body {
+  background: #111;
+  color: #e6e6e6;
+}
+
+html.dark-theme .site-header,
+html.dark-theme .site-footer {
+  background: #161616;
+  border-color: #2a2a2a;
+}
+
+html.dark-theme .site-title,
+html.dark-theme .site-nav .page-link,
+html.dark-theme .site-nav .theme-toggle,
+html.dark-theme a {
+  color: #f2f2f2;
+}
+
+html.dark-theme a:visited,
+html.dark-theme a:link {
+  color: #FF653F;
+}
+
+html.dark-theme a:hover {
+  color: #b7d6ff;
+}
+
+html.dark-theme .page-content {
+  background: #111;
+}
+
+html.dark-theme details {
+  color: #e6e6e6;
+}
+
+html.dark-theme details > summary {
+  color: #f2f2f2;
+}
+
+html.dark-theme .theme-toggle {
+  border-color: #666;
+  background: transparent;
+}
+
+/* Header helpers */
+.theme-toggle {
+  margin-left: 0.75rem;
+  padding: 0.25rem 0.5rem;
+  border: 8px solid #ccc;
+  border-radius: 999px;
+  background: #fff;
+  color: #111;
+  font: inherit;
+  cursor: pointer;
+}
+
+.theme-toggle:hover {
+  opacity: 0.85;
+}
+
+/* Footer alignment */
+.site-footer {
+  padding: 10px 0;
+}
+
+.footer-heading {
+  display: none;
+}
+
+.site-footer .footer-col-wrapper {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: start;
+  gap: 0.75rem;
+  margin-left: 0;
+  justify-content: initial;
+}
+
+.site-footer .footer-col {
+  float: none;
+  width: auto;
+  margin-bottom: 0;
+}
+
+.site-footer .footer-col-1 {
+  justify-self: start;
+}
+
+.site-footer .footer-col-2 {
+  justify-self: center;
+  text-align: center;
+  margin: 0;
+}
+
+.site-footer .footer-col-3 {
+  justify-self: end;
+  text-align: right;
+  padding-left: 0;
+  padding-right: 0;
+  width: auto;
+}
+
+.site-footer .contact-list,
+.site-footer .social-media-list,
+.site-footer .footer-col-3 p {
+  margin-top: 0;
+}
+
+.site-footer .contact-list,
+.site-footer .social-media-list {
+  margin-bottom: 0;
+}
+
+.site-footer .footer-col-3 p {
+  margin-bottom: 0;
+  width: 100%;
+  text-align: right !important;
+}
+
+@media (max-width: 640px) {
+  .site-footer .footer-col-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .site-footer .footer-col-2 {
+    text-align: left;
+  }
+
+  .site-footer .footer-col-3 {
+    text-align: right;
+  }
+}

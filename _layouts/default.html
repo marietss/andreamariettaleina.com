@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+  {%- include head.html -%}
+  <body>
+    {%- include header.html -%}
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        {{ content }}
+      </div>
+    </main>
+    {%- include footer.html -%}
+    <script>
+      (function () {
+        var root = document.documentElement;
+        var button = document.querySelector('.theme-toggle');
+        if (!button) return;
+
+        var storageKey = 'site-theme';
+
+        function setTheme(mode) {
+          var isDark = mode === 'dark';
+          root.classList.toggle('dark-theme', isDark);
+          button.setAttribute('aria-pressed', isDark ? 'true' : 'false');
+          button.textContent = isDark ? '☀' : '☾';
+        }
+
+        var savedTheme;
+        try {
+          savedTheme = window.localStorage.getItem(storageKey);
+        } catch (e) {
+          savedTheme = null;
+        }
+
+        var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        setTheme(savedTheme || (prefersDark ? 'dark' : 'light'));
+
+        button.addEventListener('click', function () {
+          var nextTheme = root.classList.contains('dark-theme') ? 'light' : 'dark';
+          setTheme(nextTheme);
+          try {
+            window.localStorage.setItem(storageKey, nextTheme);
+          } catch (e) {
+            // Ignore storage failures.
+          }
+        });
+      })();
+    </script>
+  </body>
+</html>
+

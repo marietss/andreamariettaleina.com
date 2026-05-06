@@ -1,0 +1,40 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {%- seo -%}
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | relative_url }}">
+
+  <link rel="dns-prefetch" href="//github.com">
+  <link rel="dns-prefetch" href="//site.unibo.it">
+  <link rel="dns-prefetch" href="//research-portal.uea.ac.uk">
+
+  <link rel="preload" href="{{ "/assets/main.css" | relative_url }}" as="style">
+
+  <style>
+    :root { --spacing-unit: 15px; }
+    body { margin: 0; padding: 0; font: 400 16px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background: #fff; }
+    html.dark-theme body { background: #111; color: #e6e6e6; }
+    main, .site-header, .site-footer { display: block; }
+    .wrapper { max-width: 900px; margin-right: auto; margin-left: auto; padding-right: 15px; padding-left: 15px; }
+    .site-header { border-bottom: 1px solid #e8e8e8; min-height: 56px; background: #fff; }
+    html.dark-theme .site-header { background: #0d0d0d; border-color: #2a2a2a; }
+
+    html.dark-theme .site-title,
+    html.dark-theme .site-nav .page-link {
+      color: #FF653F !important;
+    }
+
+    .theme-toggle { display: inline-block; }
+
+    @media (max-width: 640px) {
+      html.dark-theme .site-header { background: #1a1a1a; }
+    }
+  </style>
+
+  <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
+
+  {%- if jekyll.environment == 'production' and site.google_analytics -%}
+    {%- include google-analytics.html -%}
+  {%- endif -%}
+</head>
