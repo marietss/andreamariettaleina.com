@@ -29,8 +29,8 @@ layout: page
 </style>
 
 <picture>
-  <img class="profile-photo" src="/assets/images/me.jpg"
-	   srcset="/assets/images/me.jpg 220w"
+  <img class="profile-photo" src="{{ '/assets/images/me.jpg' | relative_url }}"
+	   srcset="{{ '/assets/images/me.jpg' | relative_url }} 220w"
 	   sizes="(max-width: 640px) 180px, 220px"
 	   alt="Andrea Marietta Leina" loading="lazy" />
 </picture>
